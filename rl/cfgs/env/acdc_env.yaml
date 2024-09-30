@@ -1,0 +1,32 @@
+# This is the configuration file for the acdc environment.
+envname: acdc_env
+multilabel: True
+task: reconstruction
+combine_class_recon_splits: True 
+ignore_kspace: False
+ignore_image: False
+dev_mode: False 
+val_shuffle: False
+num_workers: 3
+image_shape: [256, 256]
+kspace_shape: [256, 256]
+in_channels: 1
+dataset: acdc
+datadir: <your_data_dir>
+scale_reward: True
+reward_mode: 10
+penalty_factor: -1
+delay_step: 7
+parallel_init: True
+srange: [5,51]
+train_fixed_budget: False 
+eval_fixed_budget: True
+batch_size: ???
+val_batch_size: 32 
+test_batch_size: 32
+observation_space: [1, 256, 256] 
+use_weighted_sampler: True 
+train_sampler_filename: <your_train_sampler.p>
+reward_model_ckpt: <your_acdc_rm.ckpt>
+
+
